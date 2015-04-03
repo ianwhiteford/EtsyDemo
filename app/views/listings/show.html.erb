@@ -2,7 +2,7 @@
 <div class="row">
 	<div class="col-md-6">
 		<div class="thumbnail">
-			<%= image_tag @listing.image.url%>
+			<%= image_tag @listing.image.url %>
 		</div>
 	</div>
 	<div class="col-md-6">
@@ -11,7 +11,7 @@
 		<p><%= @listing.description %></p>
 		<br>
 		<div class="Center">
-			<%= link_to "But it Now", new_listing_order_path(@listing), class: "btn btn-primary" %>
+			<%= link_to "But it Now", new_listing_order_path(@listing), class: "btn btn-primary", data: { no_turbolink: true } %>
 		</div>
 	</div>
 </div>
