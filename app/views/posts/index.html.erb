@@ -1,3 +1,5 @@
+<h1>Welcome to the Gymloads blog!</h1>
+
 <% @posts.each do |post| %>
 	<h2><%= link_to post.title, post %></h2>
 	<p><%= post.created_at.strftime("%B, %d, %Y") %> </p>
