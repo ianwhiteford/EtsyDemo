@@ -1,19 +1,19 @@
-<h1 class="title">
+<h2 class="title">
 <%= @post.title %>
-</h1>
+</h2>
 
 <p class = "date">
-	Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-	| <%= link_to 'Edit', edit_post_path(@post) %>
-	| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+	| <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-link" %>
+	| <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %><br>
+	<i>Submitted <%= time_ago_in_words(@post.created_at) %> Ago</i>
 </p>
 
 <p class = "body">
 	<%= @post.body %>
-</p>
+</p><br><br>
 
 <p class = "comments">
-	<h2><%= @post.comments.count %> Comments</h2>
+	<h4><%= @post.comments.count %> Comments</h4>
 	<%= render @post.comments %>
 </p>
 
@@ -21,3 +21,5 @@
 	<h3>Add a comment:</h3>
 	<%= render "comments/form" %>
 </p>
+
+<%= link_to 'Back', posts_path, class: "btn btn-link" %>
