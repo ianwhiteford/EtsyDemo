@@ -55,6 +55,44 @@
     <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control"} %>
   </div>
 
+  <br>
+
+  <div class="form-group">
+  <h1>Help users find the session</h1>
+  <h4>Where can this session be performed?</h4>
+    <%= check_box_tag(:gym) %>
+    <%= label_tag(:gym, "Gym") %>
+    <%= check_box_tag(:home) %>
+    <%= label_tag(:home, "Home") %>
+    <%= check_box_tag(:outside) %>
+    <%= label_tag(:outside, "Outside") %>
+
+  <h4>What type of session is this?</h4>
+    <%= check_box_tag(:running) %>
+    <%= label_tag(:running, "Running") %>
+    <%= check_box_tag(:circuits) %>
+    <%= label_tag(:circuits, "Circuits") %>
+    <%= check_box_tag(:weights) %>
+    <%= label_tag(:weights, "Weights") %>
+    <%= check_box_tag(:dance) %>
+    <%= label_tag(:dance, "Dance") %>
+    <%= check_box_tag(:meditation) %>
+    <%= label_tag(:meditation, "Meditation") %>
+    <%= check_box_tag(:yoga) %>
+    <%= label_tag(:yogs, "Yoga") %>
+
+  <h4>How hard is the session?</h4>
+    <%= check_box_tag(:easy) %>
+    <%= label_tag(:easy, "Easy") %>
+    <%= check_box_tag(:intermediate) %>
+    <%= label_tag(:intermediate, "Intermediate") %>
+    <%= check_box_tag(:advanced) %>
+    <%= label_tag(:advanced, "Advanced") %>
+    <%= check_box_tag(:killer) %>
+    <%= label_tag(:killer, "Killer") %>
+  </div>
+
+  <br>
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>
   </div>

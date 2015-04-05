@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404230431) do
+ActiveRecord::Schema.define(version: 20150405115658) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "name"
@@ -35,6 +35,20 @@ ActiveRecord::Schema.define(version: 20150404230431) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.boolean  "outside"
+    t.boolean  "gym"
+    t.boolean  "home"
+    t.boolean  "running"
+    t.boolean  "cycling"
+    t.boolean  "circuits"
+    t.boolean  "weights"
+    t.boolean  "dance"
+    t.boolean  "meditation"
+    t.boolean  "yoga"
+    t.boolean  "easy"
+    t.boolean  "intermediate"
+    t.boolean  "advanced"
+    t.boolean  "killer"
   end
 
   create_table "orders", force: :cascade do |t|
